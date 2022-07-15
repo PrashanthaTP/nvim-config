@@ -6,7 +6,7 @@
 -- +--------------------------------------------------------------+
 
 local levels = { 
-	DEBUG=true,
+	DEBUG=false,
 	INFO=true, 
 	WARNING=true,
 	ERROR=true
@@ -70,3 +70,21 @@ end
 require('minimal')
 
 vim.cmd("colorscheme murphy")
+
+vim.cmd(
+[[
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+if has("win32")
+ let &shell='"C:/Program Files/Git/bin/sh.exe"'
+ let &shellcmdflag = '-c'
+ let &shellredir = '>%s 2>&1'
+ set shellquote= shellxescape=
+ " set noshelltemp
+ set shellxquote=
+ " important to have shellslash
+ set shellslash
+ let &shellpipe='2>&1| tee'
+" let $TMP='"C:/Program Files/Git/tmp"'
+endif
+]])
+
