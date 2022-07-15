@@ -45,14 +45,14 @@ Run :checkhealth for more info
 
 - use 'debug' library for getting src filename, lineno etc info
 
-### variables 
+### Variables 
 
 - use 'local' keyword make it local
 - string
   - regex has different syntax like `%w` for alphanumeric
     - more info : [lua-pattern-matching](https://riptutorial.com/lua/example/20315/lua-pattern-matching)
 
-### tables
+### Tables
 
 - iterate using pairs and ipairs
   - ipairs : non-numeric keys are ignored
@@ -75,3 +75,7 @@ k
 
 - for negations use `not`
 
+## Dev
+
+- Shell related settings
+  + https://vi.stackexchange.com/questions/22869/how-can-neovim-on-windows-be-configured-to-use-gitbash-as-the-shell-without-brea
