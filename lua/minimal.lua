@@ -13,6 +13,7 @@ options.signcolumn = 'yes'
 options.tabstop = 4
 options.shiftwidth = 4
 options.softtabstop = 4
+options.expandtab=true
 
 -- clipboard
 options.clipboard = "unnamedplus"
