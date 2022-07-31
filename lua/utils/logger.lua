@@ -1,20 +1,28 @@
 local M = {}
 
 local levels = { 
+	DEBUG="DEBUG",
+	INFO="INFO", 
+	WARNING="WARNING",
+	ERROR="ERROR"
+}
+local levels_status = { 
 	DEBUG=false,
-	INFO=true, 
-	WARNING=true,
-	ERROR=true
+	INFO=false, 
+	WARNING=false,
+	ERROR=false
 }
 M.levels = levels
-
+M.set_level_status = function(level,status)
+    levels_status[level] = status    
+end
 local function print_message(level, ...)
 	-- https://stackoverflow.com/questions/48273776/vararg-function-parameters-dont-work-with-arg-variable
 	local arg = {...}
 	if( level == nil or level == "" ) then
 		level = "DEBUG"
 	end
-	if(not levels[level]) then 
+	if(not levels_status[level]) then 
 	-- Only nil and false are falsy; 0 and '' are true!
 		return 
 	end
