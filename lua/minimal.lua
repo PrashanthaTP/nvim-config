@@ -26,3 +26,19 @@ vim.api.nvim_set_keymap('n', '<Leader>vs', ':source $MYVIMRC<CR>',
                         {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>vo', ':edit $MYVIMRC<CR>',
                         {noremap = true})
+
+vim.o.cursorline=true
+vim.o.listchars="eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣"
+--[[[
+vim.opt.tabstop = 4
+vim.opt.shiftwidth=4
+vim.opt.expandtab=true
+vim.cmd(
+[[
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+]]
+--)
+---]]]---
+--
