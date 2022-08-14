@@ -13,7 +13,13 @@ end
 nnoremap("<leader>vl","<cmd>e ~/.config/nvim-0.7.0/lua<CR>")
 
 -- sourcing current file
-nnoremap("<leader>x","<cmd>source %<CR>")
+function sourceCurrentFile(file)
+    local filepath=vim.fn.expand(file) 
+    vim.cmd("source "..filepath)
+    print("Reloaded : "..filepath)
+end
+--nnoremap("<leader>x","<cmd>source %<CR>")
+nnoremap("<leader>x",":lua sourceCurrentFile('%')<CR>")
 
 -- netrw
 nnoremap("<leader>ee","<cmd>Explore<CR>")
