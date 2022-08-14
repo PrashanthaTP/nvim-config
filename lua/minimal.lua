@@ -1,9 +1,11 @@
 local global = vim.g
 local options = vim.o
 
+-- UI
 options.t_CO = 256
 global.background = "dark"
 options.termguicolors = true
+options.lazyredraw=true
 
 options.number = true
 options.relativenumber = false
@@ -13,10 +15,14 @@ options.signcolumn = 'yes'
 options.tabstop = 4
 options.shiftwidth = 4
 options.softtabstop = 4
-options.expandtab=true
+options.expandtab = true
 
 -- clipboard
 options.clipboard = "unnamedplus"
+
+-- searching
+options.ignorecase = true
+options.hlsearch = false
 
 global.mapleader = " "
 
