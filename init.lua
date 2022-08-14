@@ -24,15 +24,23 @@ if not vim.tbl_contains(vim.opt.rtp:get(), base_dir) then
     vim.opt.rtp:append(base_dir)
 end
 
+--package.loaded["utils.lua_specific"] = nil
+local utils = require("utils.lua_specific")
+local require_with_force = utils.require_with_force
 
-local logger = require("utils.logger")
+local logger = require_with_force("utils.logger")
+logger.set_level_status(logger.levels.DEBUG,false)
 
 -- in tables keys are not to be surrounded with quotes
 -- if keys are string then surround key with []
 -- https://stackoverflow.com/questions/4514636/lua-implicit-table-creation-with-string-keys-why-the-extra-brackets
-logger.print_message(logger.levels.DEBUG,
+
+logger.print_message(logger.levels.DEUBG,
                     {init_path = init_path})
 
+require_with_force('minimal')
+require_with_force('shell')
+require_with_force('colors')
 require_with_force('keymappings')
 
 require('minimal')
