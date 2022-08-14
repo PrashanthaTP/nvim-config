@@ -33,6 +33,7 @@ local logger = require("utils.logger")
 logger.print_message(logger.levels.DEBUG,
                     {init_path = init_path})
 
+require_with_force('keymappings')
 
 require('minimal')
 require('shell')
