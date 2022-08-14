@@ -27,7 +27,9 @@ nnoremap("<leader>el","<cmd>Lexplore<CR>")
 
 -- files
 local fileUtils = require('files')
-nnoremap("<leader>ff",fileUtils.FindFiles)
+_G.FindFiles = fileUtils.FindFiles
+nnoremap("<leader>ff","<cmd>call v:lua.FindFiles()<CR>")
+nnoremap("<leader>fc","<cmd>lua FindFiles(vim.fn.fnameescape(vim.fn.expand('$HOME')..'/.config/nvim-0.7.0'))<CR>")
 
 
 -- buffers
