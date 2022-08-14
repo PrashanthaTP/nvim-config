@@ -43,6 +43,5 @@ require_with_force('shell')
 require_with_force('colors')
 require_with_force('keymappings')
 
-require('minimal')
-require('shell')
-require('colors')
+require_with_force('firenvim_config')
+
