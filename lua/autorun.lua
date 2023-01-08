@@ -50,6 +50,6 @@ _G.autorun_attach = M.autorun_attach
 _G.autorun_execute = M.autorun_execute
 
 vim.api.nvim_set_keymap("n","<leader>aa","<cmd>call v:lua.autorun_attach()<CR>",{noremap=true})
-vim.api.nvim_set_keymap("n","<leader>ae","<cmd>call v:lua.autorun_execute('mingw32-make.exe -s')<CR>",{noremap=true})
+vim.api.nvim_set_keymap("n","<leader>ae","<cmd>call v:lua.autorun_execute('mingw32-make.exe -s target')<CR>",{noremap=true})
 
 return M
