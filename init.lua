@@ -22,6 +22,7 @@ local base_dir = init_path:match("(.*[/\\])"):sub(1, -2) -- ~.config/nvim
 -- add init.lua's directory to runtime path
 if not vim.tbl_contains(vim.opt.rtp:get(), base_dir) then
     vim.opt.rtp:append(base_dir)
+    vim.opt.rtp:append(base_dir..package.config:sub(1,1).."after")
 end
 
 --package.loaded["utils.lua_specific"] = nil
@@ -44,4 +45,7 @@ require_with_force('colors')
 require_with_force('keymappings')
 
 require_with_force('firenvim_config')
+require_with_force('autorun')
 
+require_with_force('planner')
+require_with_force('temp')--for adding project specific local settings
