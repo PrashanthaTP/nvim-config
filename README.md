@@ -56,3 +56,11 @@ require('packer').init(
 	package_root = "D:/Applications/Nvim/nvim/pack"
 }
 ```
+
++ Download plugins
+
+Run the following inside nvim
+```
+:PackerSync
+```
+
