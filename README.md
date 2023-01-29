@@ -36,7 +36,7 @@ git clone --depth=1 git@github.com:PrashanthaTP/nvim-config.git ~/.config/nvim
 
 ### 2. Package manager setup
 
-+ Update this line in [packer.lua](after/plugin/packer.lua) {#packer-config-v1}
++ Update this line in [packer.lua](lua/tpp/packer.lua) {#packer-config-v1}
 with custom location where the plugins to be stored
 ```lua
 vim.opt.packpath:append("D:/Applications/Nvim/nvim")
