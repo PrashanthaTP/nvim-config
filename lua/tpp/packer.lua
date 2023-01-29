@@ -12,16 +12,21 @@ require('packer').init(
 )
 return require('packer').startup(function(use)
 	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'    -- The plugin location string
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-	use {
+    use ({
+        'wbthomason/packer.nvim',    -- The plugin location string
+        as = 'packer.nvim'
+    })
+    use ({
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        -- or                            , branch = '0.1.x',
+        as = 'telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim' ,as='plenary.nvim'} }
+	})
+	use ({
 		'ellisonleao/gruvbox.nvim', tag = '1.0.0',
+        as = 'gruvbox.nvim',
 		config = function()    -- Specifies code to run after this plugin is loaded.
 			vim.cmd('colorscheme gruvbox')
 		end
-	    }
+	    })
  end)
