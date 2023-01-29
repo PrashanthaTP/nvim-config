@@ -31,6 +31,7 @@ so that nvim config can be kept inside `$HOME/.config/nvim'
 ### 1. Clone this repo
 
 ```bash
+git clone --depth=1 git@github.com:PrashanthaTP/nvim-config.git ~/.config/nvim
 ```
 
 ### 2. Package manager setup
