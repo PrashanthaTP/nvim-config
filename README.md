@@ -24,3 +24,35 @@ set `XDG_CONFIG_HOME` in `~/.bash_profile` or `~/.bashrc`
 export XDG_CONFIG_HOME=$HOME/.config
 ```
 so that nvim config can be kept inside `$HOME/.config/nvim'
+
+
+## Setup
+
+### 1. Clone this repo
+
+```bash
+```
+
+### 2. Package manager setup
+
++ Update this line in [packer.lua](after/plugin/packer.lua) {#packer-config-v1}
+with custom location where the plugins to be stored
+```lua
+vim.opt.packpath:append("D:/Applications/Nvim/nvim")
+```
+
++ Download `packer.nvim`
+
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ <path from previous step>/pack/packer/start/packer.nvim
+ ```
+
++ Update package_root
+
+```lua
+require('packer').init(
+{
+	package_root = "D:/Applications/Nvim/nvim/pack"
+}
+```
