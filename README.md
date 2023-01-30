@@ -65,3 +65,7 @@ Run the following inside nvim
 :PackerSync
 ```
 
+
+## LSP
+
++ All lsp servers should be in PATH before lsp plugins are loaded
