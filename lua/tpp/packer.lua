@@ -23,10 +23,18 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim' ,as='plenary.nvim'} }
 	})
 	use ({
-		'ellisonleao/gruvbox.nvim', tag = '1.0.0',
-        as = 'gruvbox.nvim',
-		config = function()    -- Specifies code to run after this plugin is loaded.
-			vim.cmd('colorscheme gruvbox')
-		end
-	    })
- end)
+        'ellisonleao/gruvbox.nvim', tag = '1.0.0',
+        as = 'gruvbox.nvim'
+        --config = function()    -- Specifies code to run after this plugin is loaded.
+        --   vim.cmd('colorscheme gruvbox')
+        --end
+    })
+	use ({
+        'sainnhe/gruvbox-material',
+        as = 'gruvbox-material',
+        config = function()    -- Specifies code to run after this plugin is loaded.
+            vim.cmd('colorscheme gruvbox-material')
+        end
+    })
+
+end)
