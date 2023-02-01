@@ -22,6 +22,11 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+-- Related : #5
+-- these lines are awesome !!!
+lsp.configure('pyright', {})
+lsp.configure('eslint', {})
+lsp.configure('clangd', {})
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -65,6 +70,13 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>F", function() vim.lsp.buf.format() end, opts)
 end)
 
+-- Related : #5
+-- these lines are awesome !!!
+local lsp_opts = {
+    single_file_support = true
+}
+
+lsp.use({ 'clangd', 'pyright' }, lsp_opts)
 
 lsp.setup()
 
