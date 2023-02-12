@@ -58,12 +58,12 @@ return require('packer').startup(function(use)
             -- LSP Support
             { 'neovim/nvim-lspconfig', as = "nvim-lspconfig.nvim" }, -- Required
             { 'williamboman/mason.nvim', as = "mason.nvim" }, -- Optional
-            { 'williamboman/mason-lspconfig', "mason-lspconfig" }, -- Optional
+            { 'williamboman/mason-lspconfig', as = "mason-lspconfig" }, -- Optional
 
             -- Autocompletion
             { 'hrsh7th/nvim-cmp', as = "nvim-cmp" }, -- Required
-            { 'hrsh7th/cmp-nvim-lsp', "cmp-nvim-lsp" }, -- Required
-            { 'hrsh7th/cmp-buffer', "cmp-buffer" }, -- Optional
+            { 'hrsh7th/cmp-nvim-lsp', as = "cmp-nvim-lsp" }, -- Required
+            { 'hrsh7th/cmp-buffer', as = "cmp-buffer" }, -- Optional
             { 'hrsh7th/cmp-path', as = "cmp-path" }, -- Optional
             { 'saadparwaiz1/cmp_luasnip', as = 'cmp_luasnip' }, -- Optional
             { 'hrsh7th/cmp-nvim-lua', as = 'cmp-nvim-lua' }, -- Optional
