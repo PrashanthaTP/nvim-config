@@ -1,5 +1,7 @@
 -- TPP Neovim Configuration
 
+PACKPATH_FOR_PLUGINS = "D:/Applications/Nvim/nvim"
+
 MASON_BIN_PATH = "D:/Applications/Nvim/nvim/mason/bin"
 CLANGD_BIN_PATH = "D:/Applications/Nvim/nvim/mason/packages/clangd/clangd/bin"
 

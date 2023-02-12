@@ -1,5 +1,5 @@
 --vim.opt.rtp:append("D:/Applications/Nvim/nvim")
-vim.opt.packpath:append("D:/Applications/Nvim/nvim")
+vim.opt.packpath:append(PACKPATH_FOR_PLUGINS)
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
@@ -7,7 +7,7 @@ vim.opt.packpath:append("D:/Applications/Nvim/nvim")
 vim.cmd [[packadd packer.nvim]]
 require('packer').init(
     {
-        package_root = "D:/Applications/Nvim/nvim/pack"
+        package_root = PACKPATH_FOR_PLUGINS.."/pack"
     }
 )
 return require('packer').startup(function(use)
